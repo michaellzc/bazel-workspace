@@ -1,4 +1,4 @@
-This project uses the [sourcegraph/controller-cdktf/gen/tfe/workspace](https://github.com/sourcegraph/controller-cdktf/tree/main/gen/tfe/workspace) go module which contains `workspace` and causing weird behaviour with bazel.
+This project uses the [sourcegraph/controller-cdktf/gen/tfe/workspace](https://github.com/sourcegraph/controller-cdktf/tree/main/gen/tfe/workspace) go module which contains the word "workspace" and it is causing weird behaviour with bazel.
 
 This project can be setup with
 
