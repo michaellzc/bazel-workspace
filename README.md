@@ -1,4 +1,13 @@
-Reproduce the bazel workspace bug-ish behaviour.
+This project uses the [sourcegraph/controller-cdktf/gen/tfe/workspace](https://github.com/sourcegraph/controller-cdktf/tree/main/gen/tfe/workspace) go module which contains `workspace` and causing weird behaviour with bazel.
+
+This project can be setup with
+
+```sh
+bazel run //:gazelle
+bazel run //:gazelle-update-repos
+```
+
+Then compile the binary
 
 ```sh
 bazel build //cmd/test
