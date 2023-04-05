@@ -1,0 +1,44 @@
+{
+  "//": {
+    "metadata": {
+      "backend": "local",
+      "stackName": "test",
+      "version": "0.13.3"
+    },
+    "outputs": {
+    }
+  },
+  "provider": {
+    "tfe": [
+      {
+      }
+    ]
+  },
+  "resource": {
+    "tfe_workspace": {
+      "test_workspace_DA8E6C29": {
+        "//": {
+          "metadata": {
+            "path": "test/workspace",
+            "uniqueId": "test_workspace_DA8E6C29"
+          }
+        },
+        "name": "test",
+        "organization": "test"
+      }
+    }
+  },
+  "terraform": {
+    "backend": {
+      "local": {
+        "path": "/Users/michael/Code/playground/bazel-workspace/terraform.test.tfstate"
+      }
+    },
+    "required_providers": {
+      "tfe": {
+        "source": "hashicorp/tfe",
+        "version": "0.42.0"
+      }
+    }
+  }
+}

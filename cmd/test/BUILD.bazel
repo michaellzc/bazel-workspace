@@ -1,0 +1,21 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_binary", "go_library")
+
+go_library(
+    name = "test_lib",
+    srcs = ["main.go"],
+    importpath = "github.com/michaellzc/bazel-workspace/cmd/test",
+    visibility = ["//visibility:private"],
+    deps = [
+        "@com_github_aws_constructs_go_constructs_v10//:constructs",
+        "@com_github_aws_jsii_runtime_go//:jsii-runtime-go",
+        "@com_github_hashicorp_terraform_cdk_go_cdktf//:cdktf",
+        "@com_github_sourcegraph_controller_cdktf_gen_tfe//provider",
+        "@com_github_sourcegraph_controller_cdktf_gen_tfe//workspace",
+    ],
+)
+
+go_binary(
+    name = "test",
+    embed = [":test_lib"],
+    visibility = ["//visibility:public"],
+)
